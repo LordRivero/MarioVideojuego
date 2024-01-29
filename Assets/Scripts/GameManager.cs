@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); //se destruye el GameObject, para que no haya dos o más GameObjects en el juegpo.
+            Destroy(gameObject); //se destruye el GameObject, para que no haya dos o más GameObjects en el juegO.
         }
     }
 
@@ -47,5 +48,10 @@ public class GameManager : MonoBehaviour
     public void SetPoints(int value)
     {
         points = value;
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
