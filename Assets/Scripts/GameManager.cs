@@ -45,13 +45,22 @@ public class GameManager : MonoBehaviour
     {
         return points;
     }
+    //setter
     public void SetPoints(int value)
     {
         points = value;
     }
-
+    //callback: funcion que va a llamar en el onclick() de los botones.
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        //oye, audioManager, limpia todos los sonidos que están sonando.
+        AudioManager.instance.ClearAudios();
+    }
+
+    public void ExitGame()
+    {
+        Debug.Log("Exit!!");
+        Application.Quit();
     }
 }
