@@ -31,8 +31,22 @@ public class AudioManager : MonoBehaviour
         audioSourceComponent.loop = isLoop;
         audioSourceComponent.Play(); //incia el audio.
         audioList.Add(audioObject); //llevar un seguimiento de los objetos que estan sonando en la escena.
+        if (!isLoop)
+        {
+           StartCoroutine(WaitAudioEnd(audioSourceComponent)); //si el audio no esta en loop espero a que acabe para destruirlo. pero el audio no tiene que estar en loop porque de ser así nunca acabaría.
+        }
 
         return audioSourceComponent; //por si acaso desde otros componentes queremos utilizar otros parámetros de audioSource. 
+    }
+
+    IEnumerator WaitAudioEnd(AudioSource src) //IEnumerator  = corrutina para crear hilos y procesos.
+    {
+        while(src && src.isPlaying)
+        {
+          yield return null; //yield le devuelve el control a Unity.
+        }
+
+        Destroy(src.gameObject); //espera a que src deje de sonar para destruirlo.
     }
 
  public void ClearAudios() //por todos los audios de la lista, tenemos que ir uno por uno destruyendolos.

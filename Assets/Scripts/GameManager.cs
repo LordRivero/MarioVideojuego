@@ -18,9 +18,9 @@ public class GameManager : MonoBehaviour
         if (!instance) //SI INSTANCE NO TIENE INFORMACION.
         {
             instance = this; //instance se asigna a este objeto
-            DontDestroyOnLoad(gameObject); //se indica que el objetpo no se destruya con la carga de escenas.
+            DontDestroyOnLoad(gameObject); //se indica que el objeto no se destruya con la carga de escenas.
         }
-        else
+        else //si instance tiene info
         {
             Destroy(gameObject); //se destruye el GameObject, para que no haya dos o más GameObjects en el juegO.
         }

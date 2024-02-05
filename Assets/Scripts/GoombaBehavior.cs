@@ -6,6 +6,11 @@ public class GoombaBehavior : MonoBehaviour
     public GameObject target;
     public float speed;
 
+    private void Start()
+    {
+        target = FindObjectOfType<PlayerMovement>().gameObject;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -17,7 +22,8 @@ public class GoombaBehavior : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerMovement>())
             {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<PlayerMovement>().ResetPlayer();
         }
     }
 

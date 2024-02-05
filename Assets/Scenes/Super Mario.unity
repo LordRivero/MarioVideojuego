@@ -627,7 +627,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.0013916
+  orthographic size: 3.0118723
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -768,7 +768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c97d3d315194e42a824c3cd7607bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulse: 4
 --- !u!61 &573867540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1055,7 +1054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c97d3d315194e42a824c3cd7607bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulse: 4
 --- !u!61 &790826648
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1113,7 +1111,7 @@ GameObject:
   - component: {fileID: 794462804}
   - component: {fileID: 794462803}
   - component: {fileID: 794462802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1699,7 +1697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c97d3d315194e42a824c3cd7607bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulse: 4
 --- !u!61 &856486825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2021,16 +2018,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  radius: 0.35
+  rayDistance: 0.5
   jumpForce: 5
   rightKey: 100
   leftKey: 97
   jumpKey: 32
-  groundLayer:
+  groundMask:
     serializedVersion: 2
     m_Bits: 8
-  isWalking: 0
-  isJumping: 0
+  jumpClip: {fileID: 8300000, guid: a93a6d30dbb911d46bde4b2a26924e48, type: 3}
 --- !u!50 &1122869598
 Rigidbody2D:
   serializedVersion: 4
@@ -2399,7 +2395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c97d3d315194e42a824c3cd7607bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulse: 4
 --- !u!61 &1366659616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2539,7 +2534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c97d3d315194e42a824c3cd7607bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulse: 4
 --- !u!61 &1399980207
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class PlayerAnim : MonoBehaviour
 {
-    private PlayerMovement playerMovement;
-    private Animator animator;
+    private PlayerMovement PlayerMovement;
+    private Animator _animator;
     // Start is called before the first frame update
     void Start()
     {
-        playerMovement = GetComponent<PlayerMovement>();
-        animator = GetComponent<Animator>();
+        //PlayerMovement = GetComponent<PlayerMovement>();
+        //_animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerMovement.isWalking)
+        //if(PlayerMovement.isWalking)
         {
-            animator.SetBool("isWalking", true);
+            //_animator.SetBool("isWalking", true);
         }
-        else
+        //else
         {
-            animator.SetBool("isWalking", false);
+            //_animator.SetBool("isWalking", false);
         }
-        if(playerMovement.isJumping)
+        //if(PlayerMovement.isJumping)
         {
-            animator.SetBool("isJumping", true);
+            //_animator.SetBool("isJumping", true);
         }
-        else
+        //else
         {
-            animator.SetBool("isJumping", false);
+            //_animator.SetBool("isJumping", false);
         }
     }
 }
